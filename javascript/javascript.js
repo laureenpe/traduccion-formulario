@@ -13,10 +13,29 @@ function translate () { // Esta funcion traducira el formulario cuando la ejecut
   // ese array y escogemos el primer elemento
 
   title.innerHTML = 'Por favor inicia sesión'; // innerHTML se usa para cambiar el título 
-  email.placeHolder = 'correo electrónico'; // placeHolder, modifica el texto del atributo placeHolder de los inputs correspondientes al email y password
-  password.placeHolder = 'Contraseña';
+  email.placeholder = 'correo electrónico'; // placeHholder, modifica el texto del atributo placeHolder de los inputs correspondientes al email y password
+  password.placeholder = 'Contraseña';
   remember.innerHTML = 'Recordar datos';
   button.innerHTML = 'Iniciar Sesión';
 }
 
 translate();
+
+//creo una funcion que me imprima lo que el usuario ingrese
+function resultado(){
+var arroba = document.getElementById("inputEmail").value;
+var contrasenia = document.getElementById("inputPassword").value;
+
+
+
+var res = document.getElementById("email"); // busco el id email en el html
+res.innerHTML = arroba //imprimo lo que el usuario ingresa como e-mail
+var res2 = document.getElementById("contrasenia"); //busco el id de contrasenia en el html
+res2.innerHTML = contrasenia; //imprimo la contraseña que ingrese el usuario
+
+var titulo = document.getElementById("titulo");
+titulo.innerHTML= "Datos de formulario";
+
+
+}
+
